@@ -20,7 +20,7 @@ class App extends Component {
     }
 
     componentDidMount(){
-        fetch('https://jsonplaceholder.typicode.com/posts')
+        fetch('/api/posts/?format=json')
             .then(response => response.json())
             .then(boxBody => this.setState({
                 boxes: boxBody
